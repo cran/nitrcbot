@@ -4,7 +4,8 @@
 \alias{get_scan_resources}
 \title{Get scan resources}
 \usage{
-get_scan_resources(session_ID = NULL, scan_type = NULL, project = NULL)
+get_scan_resources(session_ID = NULL, scan_type = NULL, project = NULL,
+  jsessionID = NULL)
 }
 \arguments{
 \item{session_ID}{the session ID identifier, unique for each individual subject}
@@ -12,6 +13,8 @@ get_scan_resources(session_ID = NULL, scan_type = NULL, project = NULL)
 \item{scan_type}{the type of scan for which we need to list the acquisition parameters}
 
 \item{project}{optional, identifies the project to which the session_ID belongs}
+
+\item{jsessionID}{value for the JSESSIONID cookie}
 }
 \value{
 Data frame containing all the resources for this particular scan session
@@ -20,5 +23,6 @@ Data frame containing all the resources for this particular scan session
 Retrieves all the resources(files) associated with a session ID
 }
 \examples{
+## Get all scan resources for a specific session_ID
 \dontrun{get_scan_resources('NITRC_IR_E10469')}
 }
